@@ -24,43 +24,42 @@ en_pantalla("Me gusta", "Python") # Resultado: Me gusta Python
 print ("Frase concatenada:"), en_pantalla("Me encanta", "Python")
 
 # Funciones y Poliformismo
-def suma(a, b): # Definimos la
-función "suma". Tiene 2 parámetros.
-return a+b # "return" devuelve
-el resultado de la función.
+def suma(a, b): # Definimos la función "suma". Tiene 2 parámetros.
+    return a+b # "return" devuelve el resultado de la función.
 suma (2, 3) # Función con ints
 # Resultado = 5
 suma(2.7, 4.0) # Función con floats
 # Resultado = 6.7
-suma('Me gusta', 'Python') # Función con
-strings
+suma('Me gusta', 'Python') # Función con strings
 
 # Funciones anidadas
-def f1(a): # Función que "encierra"
-a f2 (enclosing)
-print(a)
+def f1(a): # Función que "encierra" a f2 (enclosing)
+    print(a)
 b = 100
 def f2(x): # Función anidada
-print(x) # Llamamos a f2 desde
-f1
+    print(x) # Llamamos a f2 desde f1
 f2(b)
 f1('Python') # Llamamos a f1  --> Resultado Python 100
 
-# Recursividad
+'''# Recursividad
 def factorial(x):
 if x>1:
-return x*factorial(x-1)
+    return x*factorial(x-1)
 else:
-return 1
+    return 1
 factorial(5)
 
 # Devolviendo múltiples valores simultáneamente
 def maxmin(lista):
-return max(lista), min(lista) #
-Devielveuna tupla de 2 elementos
+    return max(lista), min(lista) # Devielveuna tupla de 2 elementos
 l = [1, 3, 5, 6, 0]
-maximo, minimo = maxmin(l) #
-Desempaqueta la tupla en 2 variables
-print(minimo, maximo, sep= ' ')
+maximo, minimo = maxmin(l) # Desempaqueta la tupla en 2 variables
+print(minimo, maximo, sep= ' ')  '''
 
-
+a = 'Python' #Scope global (al módulo)
+print('Valor fuera:', a)
+def funcion(a):
+    a = 33
+    print('Valor dentro', a) #Scope local a la función
+    funcion(a)
+    print('Valor fuera', a)
