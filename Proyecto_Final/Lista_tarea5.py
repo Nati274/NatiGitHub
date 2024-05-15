@@ -28,10 +28,10 @@ class GestorTareas:
         if not self.tareas:
             print("No hay tareas pendientes.")
             return
-        print("┌──────────────────────────────┐")
+        print("┌──────────────────────────────────────────┐")
         for i, tarea in enumerate(self.tareas, start=1):
             print("│" + f"Tarea {i}: {tarea}".ljust(28) + "│")
-        print("└──────────────────────────────┘")
+        print("└───────────────────────────────────────────┘")
 
     def marcar_completada(self, indice):
         if 1 <= indice <= len(self.tareas):
@@ -49,14 +49,14 @@ class GestorTareas:
 
 # Función para mostrar el menú y manejar las opciones del usuario
 def mostrar_menu():
-    print(Fore.CYAN + "┌──────────────────────────┐")
-    print("│" + Fore.YELLOW + "           Menú           " + Fore.CYAN + "│")
-    print("│" + Fore.YELLOW + "1. Agregar tarea" + " " * 10 + Fore.CYAN + "│")
-    print("│" + Fore.YELLOW + "2. Marcar tarea como completada" + Fore.CYAN + "│")
-    print("│" + Fore.YELLOW + "3. Eliminar tarea" + " " * 8 + Fore.CYAN + "│")
-    print("│" + Fore.YELLOW + "4. Mostrar tareas" + " " * 8 + Fore.CYAN + "│")
-    print("│" + Fore.YELLOW + "5. Salir" + " " * 15 + Fore.CYAN + "│")
-    print("└──────────────────────────┘")
+    print(Fore.CYAN + "┌────────────────────────────────┐")
+    print("│" + Fore.YELLOW + "           Menú           " + Fore.CYAN + "      │")
+    print("│" + Fore.YELLOW + "1. Agregar tarea" + " " * 10 + Fore.CYAN + "      │")
+    print("│" + Fore.YELLOW + "2. Marcar tarea como completada" + Fore.CYAN + " │")
+    print("│" + Fore.YELLOW + "3. Eliminar tarea" + " " * 8 + Fore.CYAN + "       │")
+    print("│" + Fore.YELLOW + "4. Mostrar tareas" + " " * 8 + Fore.CYAN + "       │")
+    print("│" + Fore.YELLOW + "5. Salir" + " " * 15 + Fore.CYAN + "         │")
+    print("└────────────────────────────────┘")
 
 if __name__ == "__main__":
     gestor = GestorTareas()
